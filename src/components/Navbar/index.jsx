@@ -10,8 +10,10 @@ export default function index() {
         <Link href={"/"} className="font-bold text-2xl">
           ANIME LIST
         </Link>
-        <InputSearch />
-        <UserAction />
+        <div className="flex gap-3 items-center">
+          <InputSearch />
+          <UserAction />
+        </div>
       </div>
     </header>
   );

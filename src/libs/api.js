@@ -10,12 +10,12 @@ export const apiDataAnime = async (resource, query) => {
 
 export const apiNestedDataAnime = async (resource, objectProperty) => {
   const response = await apiDataAnime(resource);
-  return response.data.flatMap((item) => item[objectProperty]);
+  return response?.data?.flatMap((item) => item[objectProperty]);
 };
 
 export const reproduce = async (data, gap) => {
-  const first = ~~(Math.random() * (data.length - gap) + 1);
+  const first = ~~(Math.random() * (data?.length - gap) + 1);
   const last = first + gap;
-  const response = { data: data.slice(first, last) };
+  const response = { data: data?.slice(first, last) };
   return response;
 };
